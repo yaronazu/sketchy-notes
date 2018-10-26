@@ -3,15 +3,6 @@ const UI = require('sketch/ui')
 const sketch = require('sketch')
 
 export default function() {
-  /*var document = sketch.getSelectedDocument()
-  var symbols = document.getSymbols()
-
-  const symbolMaster = symbols[0]
-
-  const instance = symbolMaster.createNewInstance()
-  instance.parent = document.selectedPage*/
-
-
   const options = {
     identifier: 'unique.id',
     x:60,
@@ -35,9 +26,7 @@ export default function() {
 
   // print a message when the page loads
   webContents.on('did-finish-load', () => {
-    UI.message('Sketchy Notes v1.01');
-
-    
+    UI.message('Sketchy Notes v1.04');
   })
 
   webContents.on('copyMessage', () => {
@@ -60,7 +49,6 @@ export default function() {
         artboardNames.push(layers[k].name);
         for (var i=0;i<artboard.length;i++){ 
           if(artboard[i].name.substring(0, 1) == "$"){
-              console.log(artboard[i]);
               artboardNotes[k].push(artboard[i].overrides[0].value);
               layersList[k].push(artboard[i]);
           }
@@ -71,12 +59,8 @@ export default function() {
     webContents.executeJavaScript('writeNotes('+JSON.stringify(artboardNotes, artboardNames)+')');
 
     webContents.on('navigatePosts', (artboardIndex, noteIndex) => {
-      console.log(artboardIndex, noteIndex);
-      console.log(layersList[artboardIndex][noteIndex]);
       document.sketchObject.contentDrawView().setZoomValue(1.5);
-      document.centerOnLayer(layersList[artboardIndex][noteIndex]);
-      //document.centerOnLayer(document.selectedPage.layers[artboardIndex].layers[noteIndex+1]);
-      
+      document.centerOnLayer(layersList[artboardIndex][noteIndex]);  
     })
 
     webContents.on('removePost', (artboardIndex, noteIndex) => {
@@ -85,7 +69,6 @@ export default function() {
       UI.message('Note removed');
       layersList[artboardIndex][noteIndex].remove();
       webContents.executeJavaScript('removeNoteView()');
-      //layersList[artboardIndex].splice(noteIndex, 1);
     })
 
     webContents.on('toggleView', (s) => {

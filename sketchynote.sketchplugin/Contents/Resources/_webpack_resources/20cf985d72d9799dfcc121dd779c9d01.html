@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sketchy notes</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="4555077d49642ee7558d9e12bc9660e5.css">
+  <link rel="stylesheet" href="cd542f65c9e43abc5ea195c9ddae1bb9.css">
+  <link rel="stylesheet" href="4603494a0b1f4631d7d9ee5f8dd5b521.css">
+
+</head>
+
+<body>
+  <div class="main">
+    <div class="row">
+      <nav>
+        <ul>
+          <li>Notes</li>
+          <li class="inactive">Project</li>
+        </ul>
+        <div class="util">
+            <input type="checkbox" id="id-name--1" name="set-name" class="switch-input">
+            <label for="id-name--1" class="switch-label">Hide All<span class="toggle--on"></span><span class="toggle--off"> </span></label>
+        </div>
+      </nav>
+    </div>
+    <div class="spacer-mid"></div>
+    <div id="note-list" class="row note-list">
+
+    </div>
+  </div>
+
+  <!-- notice the "../" here. It's because webview.js will be compiled in a different folder -->
+  <script>
+      var checkbox = document.getElementById("id-name--1");
+      var noteBlocks = document.getElementsByClassName("note-block");
+   
+      function setToggle() {
+
+          if (checkbox.checked) {
+              for (let index = 0; index < noteBlocks.length; index++) {
+                  noteBlocks[index].className += " disabled";
+              }
+          }
+          else {
+              for (let index = 0; index < noteBlocks.length; index++) {
+                  noteBlocks[index].className = "note-block";
+              }
+          }
+      };
+   </script>
+  <script src="../webview.js"></script>
+</body>
+
+</html>

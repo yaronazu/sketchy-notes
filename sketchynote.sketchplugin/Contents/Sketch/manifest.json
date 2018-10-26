@@ -1,0 +1,30 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "Sketchy Notes",
+      "identifier": "my-command-identifier",
+      "script": "my-command.js",
+      "shortcut": "cmd option b"
+    },
+    {
+      "name": "Add Note",
+      "identifier": "addnote-identifier",
+      "script": "addnote.js",
+      "shortcut": "cmd option a"
+    }
+  ],
+  "menu": {
+    "title": "Sketchy Notes",
+    "items": [
+      "my-command-identifier",
+      "addnote-identifier"
+    ]
+  },
+  "version": "0.1.0",
+  "name": "my-plugin",
+  "identifier": "my-plugin",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com//master/.appcast.xml"
+}

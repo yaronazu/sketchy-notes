@@ -1,6 +1,6 @@
-# my-plugin
+# Sketchy Notes
 
-_This plugin was created using `skpm`. For a detailed explanation on how things work, checkout the [skpm Readme](https://github.com/skpm/skpm/blob/master/README.md)._
+Add notes to your Sketch designs to help you in your collaborative work in the same environment.
 
 ## Usage
 

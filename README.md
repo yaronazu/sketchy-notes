@@ -1,4 +1,5 @@
 # Sketchy Notes
+Alpha v1.00
 
 Add notes to your Sketch designs to help you in your collaborative work in the same environment.
 

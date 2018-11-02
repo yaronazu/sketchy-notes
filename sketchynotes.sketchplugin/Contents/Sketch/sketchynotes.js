@@ -2258,11 +2258,14 @@ module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resour
 /*!*****************************!*\
   !*** ./src/sketchynotes.js ***!
   \*****************************/
-/*! exports provided: default */
+/*! exports provided: onOpenDocument, SymbolAdded, CreateSymbol, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onOpenDocument", function() { return onOpenDocument; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SymbolAdded", function() { return SymbolAdded; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateSymbol", function() { return CreateSymbol; });
 /* harmony import */ var sketch_module_web_view__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sketch-module-web-view */ "./node_modules/sketch-module-web-view/lib/index.js");
 /* harmony import */ var sketch_module_web_view__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sketch_module_web_view__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -2271,6 +2274,17 @@ var UI = __webpack_require__(/*! sketch/ui */ "sketch/ui");
 
 var sketch = __webpack_require__(/*! sketch */ "sketch");
 
+function onOpenDocument(context) {
+  context.actionContext.document.showMessage('Document Opened');
+}
+function SymbolAdded(context) {
+  console.log('adsfas');
+  context.actionContext.document.showMessage('SymbolAdded');
+}
+function CreateSymbol(context) {
+  console.log('CreateSymbol:', context);
+  context.actionContext.document.showMessage('CreateSymbol');
+}
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var options = {
     identifier: 'unique.id',
@@ -2401,6 +2415,10 @@ module.exports = require("sketch/ui");
     exports[key](context);
   }
 }
+that['default'] = __skpm_run.bind(this, 'default');
+that['onOpenDocument'] = __skpm_run.bind(this, 'onOpenDocument');
+that['SymbolAdded'] = __skpm_run.bind(this, 'SymbolAdded');
+that['CreateSymbol'] = __skpm_run.bind(this, 'CreateSymbol');
 that['onRun'] = __skpm_run.bind(this, 'default')
 
 //# sourceMappingURL=sketchynotes.js.map

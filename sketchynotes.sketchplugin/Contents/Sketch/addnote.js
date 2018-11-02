@@ -105,8 +105,6 @@ var UI = __webpack_require__(/*! sketch/ui */ "sketch/ui");
 var sketch = __webpack_require__(/*! sketch */ "sketch");
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  var point = CGPointToObject(mouseInCanvasViewForDocument(context.document)); //console.log(point.x);
-
   var tmpArray = [];
   var document = sketch.getSelectedDocument();
   var symbols = document.getSymbols();
@@ -117,42 +115,10 @@ var sketch = __webpack_require__(/*! sketch */ "sketch");
 
   var symbolMaster = symbols[0];
   var instance = symbolMaster.createNewInstance();
-  instance.frame.x = point.x;
-  instance.frame.y = point.y;
   instance.parent = document.selectedPage.layers[0];
   instance.selected = true;
   tmpArray.push(instance); //console.log('instance:', instance);
-
-  UI.message('Note added');
-
-  function mouseInCanvasViewForDocument(document) {
-    var mouseInWindow = document.documentWindow().convertScreenToBase(NSEvent.mouseLocation());
-    return document.contentDrawView().convertPoint_fromView(mouseInWindow, null);
-  }
-
-  function CGPointToObject(point) {
-    return {
-      x: point.x.doubleValue(),
-      y: point.y.doubleValue()
-    };
-  } // Alternative approach with the same result
-
-  /*
-  function CGPointToObject(point) {
-      return {
-          x: point.x + 0,
-          y: point.y + 0
-      }
-  }
-  */
-
-
-  var point = CGPointToObject(mouseInCanvasViewForDocument(context.document));
-  console.log(point);
-  /*console.log(toString.call(point));*/
-
-  console.log('x:', point.x);
-  console.log('y:', point.y);
+  //UI.message('Note added');
 });
 
 /***/ }),
@@ -186,6 +152,8 @@ module.exports = require("sketch/ui");
     exports[key](context);
   }
 }
+that['default'] = __skpm_run.bind(this, 'default');
+that['CreateSymbol'] = __skpm_run.bind(this, 'CreateSymbol');
 that['onRun'] = __skpm_run.bind(this, 'default')
 
 //# sourceMappingURL=addnote.js.map

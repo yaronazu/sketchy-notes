@@ -2,6 +2,20 @@ import BrowserWindow from 'sketch-module-web-view'
 const UI = require('sketch/ui')
 const sketch = require('sketch')
 
+export function onOpenDocument(context){
+  context.actionContext.document.showMessage('Document Opened')
+}
+
+export function SymbolAdded(context){
+  console.log('adsfas');
+  context.actionContext.document.showMessage('SymbolAdded')
+}
+
+export function CreateSymbol(context){
+  console.log('CreateSymbol:', context);
+  context.actionContext.document.showMessage('CreateSymbol')
+}
+
 export default function() {
   const options = {
     identifier: 'unique.id',
@@ -86,3 +100,4 @@ export default function() {
 
   browserWindow.loadURL(require('../resources/webview.html'));
 }
+

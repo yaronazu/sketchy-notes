@@ -4,22 +4,36 @@
   "commands": [
     {
       "name": "Sketchy Notes",
-      "identifier": "sketchynotes-identifier",
+      "shortcut": "cmd option b",
       "script": "./sketchynotes.js",
-      "shortcut": "cmd option b"
+      "handlers" : {
+        "run": "default",
+        "actions": {
+          "OpenDocument": "onOpenDocument",
+          "InsertSymbol": "SymbolAdded",
+          "CreateSymbol": "CreateSymbol"
+        }
+      },
+      "identifier": "sketchynotes-identifier"
     },
     {
       "name": "Add Note",
       "identifier": "addnote-identifier",
+      "shortcut": "cmd option a",
       "script": "./addnote.js",
-      "shortcut": "cmd option a"
+      "handlers" : {
+        "run": "default",
+        "actions": {
+          "InsertSymbol": "CreateSymbol"
+        }
+      }
     }
   ],
-  "menu": {
-    "title": "Sketchy Notes",
-    "items": [
-      "sketchynotes-identifier",
-      "addnote-identifier"
-    ]
-  }
+        "menu": {
+          "title": "Sketchy Notes",
+          "items": [
+            "sketchynotes-identifier",
+            "addnote-identifier"
+          ]
+      }
 }

@@ -88,7 +88,7 @@ display: flex;
 }
 
 .note-empty-state{
-background: url("../images/animation.gif") no-repeat center center;
+background: url(cfbe1fcab8ab649a9506b050a7baa27e.gif) no-repeat center center;
 background-size: 491px 561px;
 }
 
@@ -121,7 +121,7 @@ background-size: 491px 561px;
     display: flex;
     border-radius:50%;
     align-content: flex-end;
-    background: url("../images/close-v2@3x.svg") no-repeat;
+    background: url(d1dde290550e1c872c0c04b976f8a9c6.svg) no-repeat;
     background-position: 50% 50%;
 
     transition: all 0.2s ease-in-out;
@@ -130,7 +130,7 @@ background-size: 491px 561px;
     width: 30px;
     height: 30px;
     padding:0px 2px 0px 2px;
-    background: url("../images/Black.png") no-repeat;
+    background: url(e3f403338638b4d1a6d399c919450456.png) no-repeat;
     background-position: 50% 50%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     cursor: pointer;

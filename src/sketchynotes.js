@@ -55,18 +55,25 @@ export default function() {
     var artboardNotes = [];
     var artboardNames = [];
     var layersList = [];
-
-    for(var k=0;k<layers.length;k++){
-        var artboard = layers[k].layers; 
-        artboardNotes[k] = [];
-        layersList[k] = [];
-        artboardNames.push(layers[k].name);
-        for (var i=0;i<artboard.length;i++){ 
-          if(artboard[i].name.substring(0, 1) == "$"){
-              artboardNotes[k].push(artboard[i].overrides[0].value);
+ 
+  
+  
+      for(var k=0;k<layers.length;k++){
+          var artboard = layers[k].layers;
+          artboardNotes[k] = [];
+          layersList[k] = [];
+          artboardNames.push(layers[k].name);
+          for (var i=0;i<artboard.length;i++){
+            if(artboard[i].name.substring(0, 1) == "$" && artboard[i].text==undefined){
+                artboardNotes[k].push(artboard[i].overrides[0].value);
+                layersList[k].push(artboard[i]);              
+            }
+ 
+              else {
+              artboardNotes[k].push(artboard[i].text);
               layersList[k].push(artboard[i]);
           }
-      }
+        }
     }
 
     //Write the notes in the web view

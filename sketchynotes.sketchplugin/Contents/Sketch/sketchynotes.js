@@ -2250,7 +2250,7 @@ module.exports = function buildAPI(browserWindow, panel, webview) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/eff188e0eb0fd8aea73d0768343af565.html").path();
+module.exports = "file://" + context.plugin.urlForResourceNamed("_webpack_resources/90db72a386ff1d22ed9164c09e409957.html").path();
 
 /***/ }),
 
@@ -2327,8 +2327,11 @@ function CreateSymbol(context) {
       artboardNames.push(layers[k].name);
 
       for (var i = 0; i < artboard.length; i++) {
-        if (artboard[i].name.substring(0, 1) == "$") {
+        if (artboard[i].name.substring(0, 1) == "$" && artboard[i].text == undefined) {
           artboardNotes[k].push(artboard[i].overrides[0].value);
+          layersList[k].push(artboard[i]);
+        } else {
+          artboardNotes[k].push(artboard[i].text);
           layersList[k].push(artboard[i]);
         }
       }

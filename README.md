@@ -6,7 +6,7 @@ Add notes to your Sketch designs to help you in your collaborative work in the s
 ## Add Notes
 Add comments, remarks, feedbacks, love letters you name it!
 
-![](https://www.dropbox.com/s/oqkpga0b5odbr1c/addnotes.gif?dl=0)
+![](https://dl.dropbox.com/s/oqkpga0b5odbr1c/addnotes.gif)
 
 
 ## Manage Notes

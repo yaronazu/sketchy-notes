@@ -6,7 +6,7 @@ Add notes to your Sketch designs to help you in your collaborative work in the s
 ## Add Notes
 Add comments, remarks, feedbacks, love letters you name it!
 
-![](https://diz.lt/uploads/sketchynotes/images/addnotes.gif)
+![](https://www.dropbox.com/s/oqkpga0b5odbr1c/addnotes.gif?dl=0)
 
 
 ## Manage Notes
@@ -17,7 +17,7 @@ Manage your notes in one place in one list.
 ## Navigate Notes
 Jump to notes across your sketch artboard.
 
-![](https://diz.lt/uploads/sketchynotes/images/addnotesscr.jpg)
+![](https://diz.lt/uploads/sketchynotes/images/navigate.gif)
 
 ## How Does It Work?
 It’s simple. Just add the “$” at the beginning of any text and $ketchy Notes will do the rest.

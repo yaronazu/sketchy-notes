@@ -17,7 +17,7 @@ Manage your notes in one place in one list.
 ## Navigate Notes
 Jump to notes across your sketch artboard.
 
-![](https://diz.lt/uploads/sketchynotes/images/navigate.gif)
+![](https://diz.lt/uploads/sketchynotes/images/addnotesscr.jpg)
 
 ## How Does It Work?
 It’s simple. Just add the “$” at the beginning of any text and $ketchy Notes will do the rest.
